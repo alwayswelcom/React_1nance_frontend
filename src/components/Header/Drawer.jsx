@@ -1,8 +1,8 @@
-import { useRef, useEffect } from "react"
-import { createPortal } from "react-dom"
-import FocusTrap from "focus-trap-react"
-import cn from "classnames"
-import useMountTransition from "./useMountTransition"
+import { useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
+import FocusTrap from "focus-trap-react";
+import cn from "classnames";
+import useMountTransition from "./useMountTransition";
 
 function createPortalRoot() {
   const drawerRoot = document.createElement("div");
@@ -11,6 +11,10 @@ function createPortalRoot() {
   return drawerRoot;
 }
 
+/*
+ * Read the blog post here:
+ * https://letsbuildui.dev/articles/building-a-drawer-component-with-react-portals
+ */
 const Drawer = ({
   isOpen,
   children,

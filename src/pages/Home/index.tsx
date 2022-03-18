@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   }, []);
 
   const handleGoSection = (index: string) => {
-    if (location.pathname === '/') {
+    if (location.pathname === '/' && index !== '/') {
       const element: any = document.getElementById(index)
       const topPos = element.offsetTop
       let headerHeight: any = document.getElementById('header')?.offsetHeight
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
         behavior: 'smooth'
       })
     } else {
-      history.push('/' + index)
+      history.push(`/${index === '/' ? '' : index}`)
     }
   }
 
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   return (
     <div className="m-auto">
       <Header handler={handleGoSection} />
-      <HomeComponent handler={handleGoSection} />
+      {/* <HomeComponent handler={handleGoSection} />
       <IOCComponent />
       <SolutionsComponent />
       <WhitepaperComponent />
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       <OurCoinComponent />
       <TokenDistributionComponent />
       <TeamComponent />
-      <Footer />
+      <Footer /> */}
       <ScrollUpButton handler={scrollToTop} showButton={showButton} />
     </div>
   )
