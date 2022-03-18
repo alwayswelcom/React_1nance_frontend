@@ -161,23 +161,23 @@ export const TokenSaleComponent = () => {
 
 export const MobileAppComponent = () => {
   return (
-    <div className="grid m-36">
+    <div className="grid m-[18px] my-20 md:m-36">
       <TitleComponent anchor="mobile" title="Mobile App" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="flex items-center gap-16 m-auto mt-20">
-        <div className="flex-row space-y-4">
-          <div className="font-bold uppercase text-[28px] leading-[32.81px] max-w-xl">ANDROID &amp; IOS APP</div>
-          <div className="font-light text-[24px] leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
-          <div className="grid max-w-xl gap-y-8 pt-8">
-            <div className="flex gap-2 items-center text-[20px]"><img src={Capa2} alt="Capa2" />Live crypto rate</div>
-            <div className="flex gap-2 items-center text-[20px]"><img src={subir1} alt="subir1" />Latest cryptocurrency news</div>
-            <div className="flex gap-2 items-center text-[20px]"><img src={change1} alt="change1" />Cryptocurrenci exchange</div>
+      <div className="grid md:flex items-center gap-4 md:gap-16 m-auto mt-8 md:mt-20">
+        <div className="flex-row space-y-4 px-2 md:px-0 ">
+          <div className="font-bold uppercase text-[20px] md:text-[28px] leading-[32.81px] max-w-xl">ANDROID &amp; IOS APP</div>
+          <div className="font-light px-2 md:px-0 text-[18px] md:text-[24px] indent-4 leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
+          <div className="grid max-w-xl gap-y-4 md:gap-y-8 pt-4 md:pt-8">
+            <div className="flex gap-2 items-center text-[18px] md:text-[20px]"><img src={Capa2} alt="Capa2" />Live crypto rate</div>
+            <div className="flex gap-2 items-center text-[18px] md:text-[20px]"><img src={subir1} alt="subir1" />Latest cryptocurrency news</div>
+            <div className="flex gap-2 items-center text-[18px] md:text-[20px]"><img src={change1} alt="change1" />Cryptocurrenci exchange</div>
           </div>
-          <div className="flex gap-3 w-4/5 justify-center pt-8">
-            <CommonButton title="Android" className="px-8 text-[28px] leading-[32.81px] font-block" icon={android1} />
-            <CommonButton title="Apple" className="px-10 text-[28px] leading-[32.81px] font-black" icon={apple1} />
+          <div className="flex md:flex gap-3 w-full md:w-4/5 justify-center py-4 md:py-8 md:pl-16">
+            <CommonButton title="Android" className="px-8 text-[24px] md:text-[28px] leading-[32.81px] font-black gap-4 md:gap-2 min-w-[150px] md:min-w-[200px]" icon={android1} />
+            <CommonButton title="Apple" className="px-8 md:px-10 text-[24px] md:text-[28px] leading-[32.81px] font-black gap-4 md:gap-2  min-w-[150px] md:min-w-[200px]" icon={apple1} />
           </div>
         </div>
-        <div className="flex min-w-[30%] justify-center"><img src={ilustrAppMobile1} alt="Illustrs" /></div>
+        <div className="flex min-w-[30%] justify-center mt-3 md:mt-1"><img src={ilustrAppMobile1} alt="Illustrs" /></div>
       </div>
     </div>
   )
