@@ -119,7 +119,7 @@ export const WhitepaperComponent = () => {
 }
 
 export const TokenSaleComponent = () => {
-  const fontSize = window.innerWidth / 1920 * 52
+  const fontSize = window.innerWidth / 1920 * 48
   return (
     <div className="grid m-[18px] my-20 md:m-36">
       <TitleComponent anchor="tokenSale" title="Token Sale" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
