@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       <OurCoinComponent />
       <TokenDistributionComponent />
       <TeamComponent />
-      {/* <Footer /> */}
+      <Footer />
       <ScrollUpButton handler={scrollToTop} showButton={showButton} />
     </div>
   )
