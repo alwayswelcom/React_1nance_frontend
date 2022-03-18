@@ -103,15 +103,14 @@ export const SolutionsComponent = () => {
 
 export const WhitepaperComponent = () => {
   return (
-    <div className="grid m-36">
+    <div className="grid m-[18px] my-20 md:m-36 mx-8 md:mx-auto">
       <TitleComponent anchor="whitepaper" title="White Paper" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="flex m-auto items-center gap-24 mt-20">
-        <div className="flex min-w-[30%] justify-center"><img src={_1nanceWhite} alt="IOC ilustr" /></div>
-        <div className="flex-row space-y-12">
-          <div className="font-light text-[24px] leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
-          <div className="w-full justify-items-start">
-            <DownloadButton lang="English" flag={USFlag} />
-          </div>
+      <div className="flex m-auto items-center gap-24 mt-2 md:mt-20">
+        <div className="hidden md:flex min-w-[30%] justify-center"><img src={_1nanceWhite} alt="IOC ilustr" /></div>
+        <div className="flex-row space-y-12 justify-items-center md:justify-items-start grid">
+          <div className="font-light text-[18px] md:text-[24px] leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
+          <div className="flex md:hidden min-w-[30%] justify-center"><img src={_1nanceWhite} alt="IOC ilustr" className="rounded-[20px] md:rounded-0" /></div>
+          <DownloadButton lang="English" flag={USFlag} />
         </div>
       </div>
     </div>
