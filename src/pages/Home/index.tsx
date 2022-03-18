@@ -56,8 +56,8 @@ const Home: React.FC = () => {
       <WhitepaperComponent />
       <TokenSaleComponent />
       <MobileAppComponent />
-      {/* <RoadmapComponent />
-      <OurCoinComponent />
+      <RoadmapComponent />
+      {/* <OurCoinComponent />
       <TokenDistributionComponent />
       <TeamComponent />
       <Footer /> */}
