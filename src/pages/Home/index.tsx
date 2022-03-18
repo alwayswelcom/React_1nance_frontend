@@ -52,8 +52,8 @@ const Home: React.FC = () => {
       <Header handler={handleGoSection} />
       <HomeComponent handler={handleGoSection} />
       <IOCComponent />
-      {/* <SolutionsComponent />
-      <WhitepaperComponent />
+      <SolutionsComponent />
+      {/* <WhitepaperComponent />
       <TokenSaleComponent />
       <MobileAppComponent />
       <RoadmapComponent />

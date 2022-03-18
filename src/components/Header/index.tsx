@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
               <button onClick={() => { setIsOpen(false); handler('ico') }} className={getDrawerLinkClassName}>
                 What is ICO
               </button>
-              <button onClick={() => { setIsOpen(false); handler('solution') }} className={getDrawerLinkClassName}>
+              <button onClick={() => { setIsOpen(false); handler('solutions') }} className={getDrawerLinkClassName}>
                 Solution
               </button>
               <button onClick={() => { setIsOpen(false); handler('whitepaper') }} className={getDrawerLinkClassName}>

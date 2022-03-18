@@ -30,7 +30,7 @@ export const HomeComponent = ({ handler }) => {
     <div className="grid m-[12px] my-12 md:m-24">
       <div className="grid md:flex m-auto items-center">
         <div className="grid w-[calc(100vw-24px)] md:w-1/2 justify-items-center md:justify-items-end gap-10 md:gap-12">
-          <p className="font-medium text-4xl text-left md:text-center leading-[46.88px] px-0 md:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="font-medium text-[36px] md:text-4xl text-left md:text-center leading-[46.88px] px-0 md:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className="grid md:flex gap-3 w-4/5 justify-left md:justify-center">
             <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[20px] md:text-[24px] leading-[28px] md:leading-[26px] py-3 md:py-4 min-w-[0] md:min-w-[200px] w-[fit-content] md:w-auto" />
             <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[20px] md:text-[24px] leading-[28px] md:leading-[26px] py-3 md:py-4 min-w-[0] md:min-w-[200px] w-[fit-content] md:w-auto" />
@@ -63,35 +63,35 @@ export const IOCComponent = () => {
 
 export const SolutionsComponent = () => {
   return (
-    <div className="grid m-36">
+    <div className="grid m-[18px] my-18 md:m-36">
       <TitleComponent anchor="solutions" title="Problems and Solutions" content="Most existing cryptocurrency exchanges suffer from a number of problems:" />
-      <div className="grid gap-36 mt-24">
+      <div className="grid gap-24 md:gap-36 mt-8 md:mt-24 mx-4 md:mx-0">
         <IllustComponent illust={ilustrPoorarkitectr1} title="POOR TECHNICAL ARCHITECTURE" content={
-          <div className="grid gap-2">
+          <div className="grid gap-2 pt-2 mx-2 md:mx-0 text-justify">
             <p className="indent-4">Many exchanges are developed by tech people who have little or no experience in finance or in operating exchanges. They often choose the simplest approach to get the system up and running. While this may work well in the beginning, as traffic grows the system will not be able to handle the increased load. The truth is: Exchange systems need to be engineered with proper security, efficiency, speed, and scalability in mind. Although this often slows down the initial development, this is critical for long-term success.</p>
             <p className="indent-4">Our team has decades of combined experience in building and maintaining world class financial systems that shape the economy. As a result, we understand how these systems are built and work.</p>
           </div>
         } />
         <IllustComponent illust={ilustrWebinsegura2} title="INSECURE PLATFORM" content={
-          <div className="grid gap-6 pt-4">
-            <p className="indent-4">There are hundreds of exchanges that went down due to <a className="font-[900] underline underline-offset-4 decoration-solid decoration-2" href='https://bitcointalk.org/index.php?topic=576337'>hacking</a>.</p>
+          <div className="grid gap-4 pt-2 mx-2 md:mx-0 text-justify">
+            <p className="indent-4">There are hundreds of exchanges that went down due to <a className="font-[900] underline underline-offset-4 decoration-solid decoration-2" href='https://bitcointalk.org/index.php?topic=576337' target="_blank" rel="noreferrer">hacking</a>.</p>
             <p className="indent-4"><b className="font-[900]">1Nance</b> has high security standards, audited, and penetration tested. We have experience in building financial systems to the highest security standards.</p>
           </div>
         } isRTL />
         <IllustComponent illust={ilustr9} title="POOR MARKET LIQUIDITY" content={
-          <div className="grid gap-2">
+          <div className="grid gap-2 pt-2 mx-2 md:mx-0 text-justify">
             <p className="indent-4">Poor market liquidity affects both professional traders and normal users. For instance, having a shallow orderbook means high slippage. Getting miners, institutional investors and large traders into a new exchange is a chicken and egg problem, and requires a team with deep industry resources.</p>
             <p className="indent-4"><b className="font-[900]">1Nance's</b> team have worked in both the traditional finance sector and the crypto industry for many years. Primarily, the team has worked on and operated a number of exchanges, and have accumulated a large network of partners in this space. These partners will be key in bootstrapping the exchange.</p>
           </div>
         } />
         <IllustComponent illust={ilustrBadservice1} title="POOR CUSTOMER SERVICE" content={
-          <div className="grid gap-2">
+          <div className="grid gap-2 pt-2 mx-2 md:mx-0 text-justify">
             <p className="indent-4">Traders are people who behave differently from other users. Thus, understanding the trader mentality is vital for running a successful exchange. This is becasue money is literally on-the-line. Many exchanges service traders as if they were running a social media site. A 3-second delay in seeing your friends’ status update would hardly be noticed. However, on an exchange the same would be unacceptable, resulting in a torrent of user complaints.</p>
             <p className="indent-4">In addition to the technology stack, <b className="font-[900]">1Nance</b> is built with quality service in mind. It shares support responsibilities among its staff. Therefore, when traders face problems, they get support from someone who knows the system, not someone reading from a script.</p>
           </div>
         } isRTL />
         <IllustComponent illust={ilustrBadlenguagesupport1} title="POOR INTERNATIONALIZATION AND LANGUAGE SUPPORT" content={
-          <div className="grid gap-2">
+          <div className="grid gap-2 pt-2 mx-2 md:mx-0 text-justify">
             <p className="indent-4">Blockchains have no borders. However, some exchanges focus only on one language or country or region of the world.</p>
             <p className="indent-4">In contrast, our international multi-lingual team has extensive working experience in North America, Europe and Asia; therefore we are able to smoothly support the global market.</p>
           </div>
