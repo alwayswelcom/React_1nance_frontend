@@ -51,8 +51,8 @@ const Home: React.FC = () => {
     <div className="m-auto">
       <Header handler={handleGoSection} />
       <HomeComponent handler={handleGoSection} />
-      {/* <IOCComponent />
-      <SolutionsComponent />
+      <IOCComponent />
+      {/* <SolutionsComponent />
       <WhitepaperComponent />
       <TokenSaleComponent />
       <MobileAppComponent />

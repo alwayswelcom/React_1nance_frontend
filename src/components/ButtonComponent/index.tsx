@@ -52,11 +52,13 @@ interface PlayButtonProps {
 
 export const PlayButton: React.FC<PlayButtonProps> = ({ handler }) => {
   return (
-    <div className="grid items-center justify-items-center mt-[-160px] text-[20px] font-[700]">
-      <div onClick={handler} className="cursor-pointer grid w-[72px] h-[72px] hover:scale-[1.03] active:scale-100 pl-2 rounded-full bg-[#F97919] hover:bg-[#FFAF10] active:bg-[#F97919] transition-all duration-300 ease-out place-content-center">
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.364746 24.8138V0.175493L25.8057 12.4915L0.364746 24.8138ZM4 6.5V18.1967L17 12.4915L4 6.5Z" fill="white" />
-        </svg>
+    <div className="grid items-center justify-items-center mt-[-125px] md:mt-[-160px] gap-1 md:gap-0 text-[14px] md:text-[20px] font-[700]">
+      <div onClick={handler} className="cursor-pointer grid w-[60px] h-[60px] md:w-[72px] md:h-[72px] hover:scale-[1.03] active:scale-100 pl-2 rounded-full bg-[#F97919] hover:bg-[#FFAF10] active:bg-[#F97919] transition-all duration-300 ease-out place-content-center">
+        <div className="scale-90 md:scale-100">
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.364746 24.8138V0.175493L25.8057 12.4915L0.364746 24.8138ZM4 6.5V18.1967L17 12.4915L4 6.5Z" fill="white" />
+          </svg>
+        </div>
       </div>
       How it works
     </div>

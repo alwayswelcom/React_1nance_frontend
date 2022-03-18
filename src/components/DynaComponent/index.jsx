@@ -29,7 +29,7 @@ export const HomeComponent = ({ handler }) => {
   return (
     <div className="grid m-[12px] my-12 md:m-24">
       <div className="grid md:flex m-auto items-center">
-        <div className="grid  w-[calc(100vw-24px)] md:w-1/2 justify-items-center md:justify-items-end gap-10 md:gap-12">
+        <div className="grid w-[calc(100vw-24px)] md:w-1/2 justify-items-center md:justify-items-end gap-10 md:gap-12">
           <p className="font-medium text-4xl text-left md:text-center leading-[46.88px] px-0 md:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className="grid md:flex gap-3 w-4/5 justify-left md:justify-center">
             <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[20px] md:text-[24px] leading-[28px] md:leading-[26px] py-3 md:py-4 min-w-[0] md:min-w-[200px] w-[fit-content] md:w-auto" />
@@ -47,13 +47,13 @@ export const HomeComponent = ({ handler }) => {
 export const IOCComponent = () => {
   const handlePlay = () => { }
   return (
-    <div className="grid m-24">
+    <div className="grid m-[12px] my-12 md:m-24">
       <TitleComponent anchor="ico" title="What is Crypto ICO" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center space-x-12">
-        <div className="flex gap-x-24 m-auto items-center">
-          <div className="order-last min-w-[30%] justify-center"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
-          <div className="flex-row space-y-4">
-            <div className="font-light text-[24px] leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
+        <div className="grid md:flex gap-x-24 m-auto items-center">
+          <div className="md:order-last min-w-[30%] justify-center"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
+          <div className="flex-row space-y-4 mt-24 md:mt-0">
+            <div className="font-light text-[18px] md:text-[24px] leading-[24px] md:leading-[28.13px] max-w-xl px-8 md:px-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
           </div>
         </div >
       </div>
