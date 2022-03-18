@@ -79,8 +79,15 @@ body {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   position: absolute;
-  left: 80px;
+  left: 60px;
   top: -10px;
+}
+
+#moreMenu:before {
+  left: 32px;
+}
+#moreLangSM:before {
+  left: 78px;
 }
 
 *,

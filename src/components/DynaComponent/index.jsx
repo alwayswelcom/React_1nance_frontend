@@ -27,16 +27,16 @@ import MemberComponent from '../MemberComponent'
 
 export const HomeComponent = ({ handler }) => {
   return (
-    <div className="grid m-24">
-      <div className="flex m-auto items-center">
-        <div className="grid w-1/2 justify-items-end gap-12">
-          <p className="font-medium text-4xl text-center leading-[46.88px] px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div className="flex gap-3 w-4/5 justify-center">
-            <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[24px] leading-[28px] py-4" />
-            <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[24px] leading-[28px] py-4" />
+    <div className="grid m-[12px] my-12 md:m-24">
+      <div className="grid md:flex m-auto items-center">
+        <div className="grid  w-[calc(100vw-24px)] md:w-1/2 justify-items-center md:justify-items-end gap-10 md:gap-12">
+          <p className="font-medium text-4xl text-left md:text-center leading-[46.88px] px-0 md:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className="grid md:flex gap-3 w-4/5 justify-left md:justify-center">
+            <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[20px] md:text-[24px] leading-[28px] md:leading-[26px] py-3 md:py-4 min-w-[0] md:min-w-[200px] w-[fit-content] md:w-auto" />
+            <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[20px] md:text-[24px] leading-[28px] md:leading-[26px] py-3 md:py-4 min-w-[0] md:min-w-[200px] w-[fit-content] md:w-auto" />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-[calc(100vw-24px)] md:w-1/2">
           <img src={ilustrHome1nance1} alt="Home ilustr" />
         </div>
       </div>

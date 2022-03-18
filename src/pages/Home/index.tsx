@@ -50,8 +50,8 @@ const Home: React.FC = () => {
   return (
     <div className="m-auto">
       <Header handler={handleGoSection} />
-      {/* <HomeComponent handler={handleGoSection} />
-      <IOCComponent />
+      <HomeComponent handler={handleGoSection} />
+      {/* <IOCComponent />
       <SolutionsComponent />
       <WhitepaperComponent />
       <TokenSaleComponent />

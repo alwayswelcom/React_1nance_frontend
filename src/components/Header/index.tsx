@@ -52,8 +52,8 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
     let langLeftSM = document.getElementById("langMoreSM")?.offsetLeft
     setMenuLeft(menuLeft ? menuLeft : 0)
     setLangLeft(langLeft ? langLeft : 0)
-    setLangLeftSM(langLeftSM ? langLeftSM - 48 : 0)
-  }, [menuMore])
+    setLangLeftSM(langLeftSM ? langLeftSM - 28 : 0)
+  }, [])
 
   const handleSignIn = () => { }
 
@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
           </div>
         </div>
       </div >
-      <div className="items-center justify-between flex md:hidden mx-5">
+      <div className="items-center justify-between flex md:hidden ml-5">
         <div className="grid gap-[2px] hover:scale-105 active:scale-95" onClick={() => setIsOpen(!isOpen)}>
           <hr className="w-[20px]" style={{ border: '2px solid white' }} />
           <hr className="w-[20px]" style={{ border: '2px solid white' }} />
