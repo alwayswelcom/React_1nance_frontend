@@ -195,9 +195,9 @@ export const RoadmapComponent = () => {
 
 export const OurCoinComponent = () => {
   return (
-    <div className="grid m-36 my-0">
+    <div className="grid m-[18px] my-20 md:m-36">
       <TitleComponent anchor="ourCoin" title="Our Coin" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="flex items-center gap-16 m-auto mt-20">
+      <div className="grid md:flex items-center gap-4 md:gap-16 w-full mt-3 md:mt-20 px-2 md:px-0">
         <IllustComponent illust={ilustrOurCoin1} title="1NANCE COIN" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." />
       </div>
     </div>
