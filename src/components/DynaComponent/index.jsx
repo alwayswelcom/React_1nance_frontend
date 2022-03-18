@@ -13,6 +13,7 @@ import subir1 from "../../assets/svg/subir1.svg"
 import change1 from "../../assets/svg/change1.svg"
 import ilustrOurCoin1 from "../../assets/svg/ilustrOurCoin1.svg"
 import ilustGraficFunds1 from "../../assets/svg/ilustGraficFunds1.svg"
+import _1NanceTeam from "../../configs/_1NanceTeam.json"
 
 import USFlag from "../../assets/png/estados-unidos1.png"
 import android1 from "../../assets/png/android1.png"
@@ -134,7 +135,7 @@ export const TokenSaleComponent = () => {
                 fontFamily="fantasy"
               />
             </div>
-            <div className="flex w-full justify-between md:mt-16">
+            <div className="flex w-full justify-around md:mt-16">
               <TokenSaleStepComponent name="Pre-Sale" />
               <TokenSaleStepComponent name="Soft Cap" />
               <TokenSaleStepComponent name="Bonus" />
@@ -231,17 +232,33 @@ export const TokenDistributionComponent = () => {
 }
 
 export const TeamComponent = () => {
+  const items = Array([])
+
+  for (let i = 0; i < _1NanceTeam.length; i++) {
+    let item = _1NanceTeam[i]
+    let idx = parseInt(i / 3)
+    items[idx] = (items[idx] === undefined ? [] : items[idx])
+    items[idx].push(<MemberComponent key={i} profile={item.profile} name={item.name} role={item.role} link={item.link} className="justify-center" />)
+  }
+
   return (
-    <div className="grid m-36">
-      <TitleComponent anchor="team" title="Team" content="We have a solid team with both traditional Wall Street finance and cryptocurrency experience. We have a track record of successful startups under our belt." />
-      <div className="flex items-center justify-items-center gap-48 m-auto mt-20">
-        <MemberComponent name="Logan S.Peréz" role="CEO and CFO" />
-        <MemberComponent name="Logan S.Peréz" role="CEO and CFO" />
-        <MemberComponent name="Logan S.Peréz" role="CEO and CFO" />
+    <div className="grid m-[18px] my-20 md:m-36">
+      <TitleComponent anchor="team" showContent title="Team" content="We have a solid team with both traditional Wall Street finance and cryptocurrency experience. We have a track record of successful startups under our belt." />
+      <div className="hidden md:grid">
+        {
+          items.map((item, i) =>
+            <div key={i} className="flex items-center justify-items-center gap-48 m-auto mt-20">
+              {item}
+            </div>
+          )
+        }
       </div>
-      <div className="flex items-center justify-items-center gap-48 m-auto mt-20">
-        <MemberComponent name="Logan S.Peréz" role="CEO and CFO" />
-        <MemberComponent name="Logan S.Peréz" role="CEO and CFO" />
+      <div className="grid md:hidden mx-4">
+        {
+          _1NanceTeam.map((item, i) =>
+            <MemberComponent key={i} profile={item.profile} name={item.name} role={item.role} link={item.link} className={i % 2 === 0 ? "justify-start" : "justify-end"} />
+          )
+        }
       </div>
     </div>
   )

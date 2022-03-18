@@ -35,7 +35,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ url = "", lang, 
 }
 
 interface IconButtonProps {
-  handler: any,
+  handler?: any,
   icon: any,
   className?: string,
 }

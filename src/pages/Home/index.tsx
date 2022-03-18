@@ -59,8 +59,8 @@ const Home: React.FC = () => {
       <RoadmapComponent />
       <OurCoinComponent />
       <TokenDistributionComponent />
-      {/* <TeamComponent />
-      <Footer /> */}
+      <TeamComponent />
+      {/* <Footer /> */}
       <ScrollUpButton handler={scrollToTop} showButton={showButton} />
     </div>
   )
