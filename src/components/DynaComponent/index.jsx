@@ -120,32 +120,32 @@ export const WhitepaperComponent = () => {
 export const TokenSaleComponent = () => {
   const fontSize = window.innerWidth / 1920 * 52
   return (
-    <div className="grid m-36">
+    <div className="grid m-[18px] my-20 md:m-36">
       <TitleComponent anchor="tokenSale" title="Token Sale" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="flex items-center gap-16 mt-20">
-        <div className="grid w-1/2 h-full align-center justify-items-end">
-          <div className="grid justify-items-end rounded-[16px] p-10 pt-20 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]" >
-            <div className="grid w-full h-24 place-items-center justify-items-center mt-8">
+      <div className="grid md:flex items-center gap-4 md:gap-16 mt-8 md:mt-20">
+        <div className="grid w-auto md:w-1/2 h-full align-center justify-items-end">
+          <div className="grid justify-items-end rounded-[16px] p-4 md:p-10 md:pt-16 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]" >
+            <div className="grid w-full h-24 place-items-center justify-items-center mt-0 md:mt-8">
               <Flipclock
                 seconds={12 * 24 * 60 * 60}
                 dark={false}
-                fontSize={fontSize}
+                fontSize={fontSize > 25 ? fontSize : 25}
                 fontWeight={900}
                 fontFamily="fantasy"
               />
             </div>
-            <div className="flex w-full justify-center gap-24 mt-20">
+            <div className="flex w-full justify-between md:mt-16">
               <TokenSaleStepComponent name="Pre-Sale" />
               <TokenSaleStepComponent name="Soft Cap" />
               <TokenSaleStepComponent name="Bonus" />
             </div>
-            <div className="w-full bg-white rounded-full p-1.5 px-2"><div className="bg-gradient-to-r from-[#03185B] to-[#0040C1] rounded-[8px] w-2/3 h-6"></div></div>
-            <div className="grid justify-items-center mt-12 w-full" ><CommonButton title="Purchase Token" className="from-[#03185B] via-[#133295] to-[#03185B] text-white font-[500] rounded-[16px] text-[24px] leading-[28px] min-w-[250px] py-4" /></div>
+            <div className="w-full bg-white rounded-full p-1 px-1.5 md:p-1.5 md:px-2"><div className="bg-gradient-to-r from-[#03185B] to-[#0040C1] rounded-[5px] md:rounded-[8px] w-2/3 h-4 md:h-6"></div></div>
+            <div className="grid justify-items-center mt-6 md:mt-12 w-full" ><CommonButton title="Purchase Token" className="from-[#03185B] via-[#133295] to-[#03185B] text-white font-[500] rounded-[12px] md:rounded-[16px] text-[19px] md:text-[24px] leading-[22px] md:leading-[28px] min-w-[220px] md:min-w-[250px] py-4" /></div>
           </div>
         </div>
-        <div className="flex-row w-1/2 space-y-12">
-          <div className="font-light text-[24px] leading-[28.13px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida.</div>
-          <div className="grid grid-cols-2 w-full justify-items-start gap-y-4">
+        <div className="flex-row w-full md:w-1/2 space-y-6 md:space-y-12">
+          <div className="font-light hidden md:flex text-[24px] leading-[28.13px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida.</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full justify-items-start gap-y-0 md:gap-y-4 gap-x-4 px-4">
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
