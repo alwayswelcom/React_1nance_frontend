@@ -206,9 +206,9 @@ export const OurCoinComponent = () => {
 
 export const TokenDistributionComponent = () => {
   return (
-    <div className="grid m-36">
+    <div className="grid m-[18px] my-20 md:m-36">
       <TitleComponent anchor="tokenDistribution" title="Token Distribution" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="flex items-center gap-16 m-auto mt-20">
+      <div className="flex items-center gap-16 m-auto mt-4 md:mt-20">
         <IllustComponent illust={ilustGraficFunds1} title="1NANCE COIN" content={
           <div className="grid gap-3">
             <p className="indent-4">
