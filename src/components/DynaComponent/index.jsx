@@ -52,7 +52,7 @@ export const IOCComponent = () => {
       <TitleComponent anchor="ico" title="What is Crypto ICO" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center space-x-12">
         <div className="grid lg:flex gap-x-24 m-auto items-center">
-          <div className="lg:order-last min-w-[30%] justify-center"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
+          <div className="lg:order-last min-w-[30%] justify-center grid"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
           <div className="flex-row space-y-4 mt-24 lg:mt-0">
             <div className="font-light text-[18px] lg:text-[24px] leading-[24px] lg:leading-[28.13px] max-w-xl px-8 lg:px-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
           </div>
