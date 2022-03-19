@@ -125,12 +125,12 @@ export const TokenSaleComponent = () => {
       <TitleComponent anchor="tokenSale" title="Token Sale" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="grid lg:flex items-center gap-4 lg:gap-16 mt-8 lg:mt-20">
         <div className="grid w-auto lg:w-1/2 h-full align-center justify-items-end">
-          <div className="grid justify-items-end rounded-[16px] p-4 lg:p-10 lg:pt-16 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]" >
-            <div className="grid w-full h-24 place-items-center justify-items-center mt-0 lg:mt-8">
+          <div className="grid justify-items-end rounded-[16px] px-4 md:px-6 py-6 lg:p-10 lg:pt-16 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]" >
+            <div className="grid w-full h-24 place-items-center justify-items-center mt-0 md:mt-4 lg:mt-4">
               <Flipclock
                 seconds={12 * 24 * 60 * 60}
                 dark={false}
-                fontSize={fontSize > 25 ? fontSize : 25}
+                fontSize={fontSize > 25 ? fontSize : (window.innerWidth > 720 ? 38 : 25)}
                 fontWeight={900}
                 fontFamily="fantasy"
               />
@@ -146,7 +146,7 @@ export const TokenSaleComponent = () => {
         </div>
         <div className="flex-row w-full lg:w-1/2 space-y-6 lg:space-y-12">
           <div className="font-light hidden lg:flex text-[24px] leading-[28.13px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida.</div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 w-full justify-items-start gap-y-0 lg:gap-y-4 gap-x-4 px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-full justify-items-start gap-y-0 lg:gap-y-1 gap-x-4 px-4">
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
             <ArrowComponent content="Lorem ipsum dolor sit amet," emphasize="consectetur adipiscing elit." />
