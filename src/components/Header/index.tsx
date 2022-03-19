@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
 
   return (
     <div className={`${langMoreSM ? "open " : ""}`}>
-      <div className="items-center hidden lg:grid" id="header">
+      <div className="items-center hidden xl:grid" id="header">
         <div className="absolute flex z-0">
           <div onClick={() => handler('/')} className="cursor-pointer">
             <img src={Logo} alt="logo" />
@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
           </div>
         </div>
       </div >
-      <div className="items-center justify-between flex lg:hidden ml-5 md:ml-[40px] md:mr-[20px]">
+      <div className="items-center justify-between flex xl:hidden ml-5 md:ml-[40px] md:mr-[20px]">
         <div className="grid gap-[2px] md:gap-[4px] hover:scale-105 active:scale-95" onClick={() => setIsOpen(!isOpen)}>
           <hr className="w-[20px] md:w-[24px]" style={{ border: '2px solid white' }} />
           <hr className="w-[20px] md:w-[24px]" style={{ border: '2px solid white' }} />
