@@ -28,7 +28,7 @@ import MemberComponent from '../MemberComponent'
 
 export const HomeComponent = ({ handler }) => {
   return (
-    <div className="grid m-[12px] my-12 lg:m-24">
+    <div className="grid m-[12px] my-12 md:m-18 lg:m-24">
       <div className="grid lg:flex m-auto items-center">
         <div className="grid w-[calc(100vw-24px)] lg:w-1/2 justify-items-center lg:justify-items-end gap-10 lg:gap-12">
           <p className="font-medium text-[36px] lg:text-4xl text-left lg:text-center leading-[46.88px] px-0 lg:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -37,7 +37,7 @@ export const HomeComponent = ({ handler }) => {
             <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[20px] lg:text-[24px] leading-[28px] lg:leading-[26px] py-3 lg:py-4 min-w-[0] lg:min-w-[200px] w-[fit-content] lg:w-auto" />
           </div>
         </div>
-        <div className="w-[calc(100vw-24px)] lg:w-1/2">
+        <div className="w-[calc(100vw-24px)] grid justify-items-center lg:w-1/2">
           <img src={ilustrHome1nance1} alt="Home ilustr" />
         </div>
       </div>
@@ -48,7 +48,7 @@ export const HomeComponent = ({ handler }) => {
 export const IOCComponent = () => {
   const handlePlay = () => { }
   return (
-    <div className="grid m-[12px] my-12 lg:m-24">
+    <div className="grid m-[12px] my-12 md:m-18 lg:m-24">
       <TitleComponent anchor="ico" title="What is Crypto ICO" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center space-x-12">
         <div className="grid lg:flex gap-x-24 m-auto items-center">
@@ -64,7 +64,7 @@ export const IOCComponent = () => {
 
 export const SolutionsComponent = () => {
   return (
-    <div className="grid m-[18px] my-18 lg:m-36">
+    <div className="grid m-[18px] my-18 md:m-24 lg:m-36">
       <TitleComponent anchor="solutions" title="Problems and Solutions" content="Most existing cryptocurrency exchanges suffer from a number of problems:" />
       <div className="grid gap-24 lg:gap-36 mt-8 lg:mt-24 mx-4 lg:mx-0">
         <IllustComponent illust={ilustrPoorarkitectr1} title="POOR TECHNICAL ARCHITECTURE" content={
@@ -104,7 +104,7 @@ export const SolutionsComponent = () => {
 
 export const WhitepaperComponent = () => {
   return (
-    <div className="grid m-[18px] my-20 lg:m-36 mx-8 lg:mx-auto">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36 mx-8 lg:mx-auto">
       <TitleComponent anchor="whitepaper" title="White Paper" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center gap-24 mt-2 lg:mt-20">
         <div className="hidden lg:flex min-w-[30%] justify-center"><img src={_1nanceWhite} alt="IOC ilustr" /></div>
@@ -121,7 +121,7 @@ export const WhitepaperComponent = () => {
 export const TokenSaleComponent = () => {
   const fontSize = window.innerWidth / 1920 * 48
   return (
-    <div className="grid m-[18px] my-20 lg:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="tokenSale" title="Token Sale" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="grid lg:flex items-center gap-4 lg:gap-16 mt-8 lg:mt-20">
         <div className="grid w-auto lg:w-1/2 h-full align-center justify-items-end">
@@ -162,7 +162,7 @@ export const TokenSaleComponent = () => {
 
 export const MobileAppComponent = () => {
   return (
-    <div className="grid m-[18px] my-20 lg:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="mobile" title="Mobile App" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="grid lg:flex items-center gap-4 lg:gap-16 m-auto mt-8 lg:mt-20">
         <div className="flex-row space-y-4 px-2 lg:px-0 ">
@@ -196,7 +196,7 @@ export const RoadmapComponent = () => {
 
 export const OurCoinComponent = () => {
   return (
-    <div className="grid m-[18px] my-20 lg:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="ourCoin" title="Our Coin" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="grid lg:flex items-center gap-4 lg:gap-16 w-full mt-3 lg:mt-20 px-2 lg:px-0">
         <IllustComponent illust={ilustrOurCoin1} title="1NANCE COIN" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." />
@@ -207,7 +207,7 @@ export const OurCoinComponent = () => {
 
 export const TokenDistributionComponent = () => {
   return (
-    <div className="grid m-[18px] my-20 lg:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="tokenDistribution" title="Token Distribution" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex items-center gap-16 m-auto mt-4 lg:mt-20">
         <IllustComponent illust={ilustGraficFunds1} title="1NANCE COIN" content={
@@ -242,7 +242,7 @@ export const TeamComponent = () => {
   }
 
   return (
-    <div className="grid m-[18px] my-20 lg:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="team" showContent title="Team" content="We have a solid team with both traditional Wall Street finance and cryptocurrency experience. We have a track record of successful startups under our belt." />
       <div className="hidden lg:grid">
         {

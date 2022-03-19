@@ -113,11 +113,11 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
           </div>
         </div>
       </div >
-      <div className="items-center justify-between flex lg:hidden ml-5">
-        <div className="grid gap-[2px] hover:scale-105 active:scale-95" onClick={() => setIsOpen(!isOpen)}>
-          <hr className="w-[20px]" style={{ border: '2px solid white' }} />
-          <hr className="w-[20px]" style={{ border: '2px solid white' }} />
-          <hr className="w-[20px]" style={{ border: '2px solid white' }} />
+      <div className="items-center justify-between flex lg:hidden ml-5 md:ml-[40px] md:mr-[20px]">
+        <div className="grid gap-[2px] md:gap-[4px] hover:scale-105 active:scale-95" onClick={() => setIsOpen(!isOpen)}>
+          <hr className="w-[20px] md:w-[24px]" style={{ border: '2px solid white' }} />
+          <hr className="w-[20px] md:w-[24px]" style={{ border: '2px solid white' }} />
+          <hr className="w-[20px] md:w-[24px]" style={{ border: '2px solid white' }} />
         </div>
         <div className="flex z-0">
           <div onClick={() => handler('/')} className="cursor-pointer justify-center" style={{ transform: 'translateX(10px)' }}>
@@ -162,16 +162,16 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
         </div>
         <div id="langMoreSM" onClick={() => { if (!langMoreSM) { setLangMoreSM(true); setMoreMenu('LANG') } else { setLangMoreSM(false) } }} className={`${getNavLinkClassName} z-[998] flex flex-rows text-[14px] spacing-[3px] px-0 mx-0 py-5`}>
           <div className="flex items-center w-13">
-            <img src={flagInfo[uiLang].img} className="w-full w-6 h-6" alt={flagInfo[uiLang].code} />
-            <div className="ml-2 font-[700] w-[20px] text-center tracking-widest">{flagInfo[uiLang].code}</div>
+            <img src={flagInfo[uiLang].img} className="w-full w-6 h-6 md:w-8 md:h-8" alt={flagInfo[uiLang].code} />
+            <div className="ml-2 font-[700] w-[20px] md:w-[24px] md:text-[17px] text-center tracking-widest">{flagInfo[uiLang].code}</div>
           </div>
           <ChevronDownIcon className="w-6 h-6" />
         </div>
-        <div id="moreLangSM" className={`${langMoreSM ? "opacity-1 scale-y-100" : "opacity-0 scale-y-0"} z-[998] origin-top grid transition-all duration-300 absolute bg-[rgba(240,240,240,0.9)] backdrop-blur-sm px-3 py-2 w-[120px] rounded-[0.25rem] drop-shadow-lg"`} style={{ left: langLeftSM, top: langMoreSM ? 70 : 80, boxShadow: "-1px 2px 15px 0 rgb(0 0 0 / 20%)" }}>
+        <div id="moreLangSM" className={`${langMoreSM ? "opacity-1 scale-y-100" : "opacity-0 scale-y-0"} z-[998] origin-top grid transition-all duration-300 absolute bg-[rgba(240,240,240,0.9)] backdrop-blur-sm px-3 py-2 w-[120px] md:w-[140px] rounded-[0.25rem] drop-shadow-lg"`} style={{ left: langLeftSM, top: langMoreSM ? 70 : 80, boxShadow: "-1px 2px 15px 0 rgb(0 0 0 / 20%)" }}>
           {flagInfo.map((item, i) =>
             <div key={i} onClick={() => { setUiLang(i); setLangMoreSM(false) }} className={`${moreClassName}`}>
-              <div className="flex items-center gap-1.5">
-                <img src={item.img} className="w-full w-5 h-5" alt={item.lang} />
+              <div className="flex items-center gap-1.5 md:gap-2 md:text-[16px]">
+                <img src={item.img} className="w-full w-5 h-5 md:w-6 md:h-6" alt={item.lang} />
                 <div>{item.lang}</div>
               </div>
             </div>
