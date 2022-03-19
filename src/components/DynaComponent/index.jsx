@@ -243,7 +243,7 @@ export const TeamComponent = () => {
   }
 
   return (
-    <div className="grid m-[18px] my-20 md:m-24 xl:m-36">
+    <div className="grid m-[18px] my-20 md:m-24 lg:m-36">
       <TitleComponent anchor="team" showContent title="Team" content="We have a solid team with both traditional Wall Street finance and cryptocurrency experience. We have a track record of successful startups under our belt." />
       <div className="hidden xl:grid">
         {
@@ -254,7 +254,7 @@ export const TeamComponent = () => {
           )
         }
       </div>
-      <div className="grid xl:hidden mx-4">
+      <div className="grid xl:hidden mx-4 lg:mx-12">
         {
           _1NanceTeam.map((item, i) =>
             <MemberComponent key={i} profile={item.profile} name={item.name} role={item.role} link={item.link} className={i % 2 === 0 ? "justify-start" : "justify-end"} />
