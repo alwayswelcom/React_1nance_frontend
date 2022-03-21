@@ -61,8 +61,8 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
     <div className={`${langMoreSM ? "open " : ""}`}>
       <div className="items-center hidden xl:grid" id="header">
         <div className="absolute flex z-0">
-          <div onClick={() => handler('/')} className="cursor-pointer">
-            <img src={Logo} alt="logo" />
+          <div className="cursor-pointer">
+            <a href="/"><img src={Logo} alt="logo" /></a>
           </div>
         </div>
         <div className="flex justify-center" style={{ paddingLeft: padL + "px" }}>
