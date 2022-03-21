@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ handler }) => {
   const [uiLang, setUiLang] = useState(0)
   const [isOpen, setIsOpen] = useState(false);
 
-  const setMoreMenu = (type: any) => {
+  const setMoreMenu = (type: string) => {
     if (type === "LANG" && langMore === true)
       setLangMore(true)
     if (type === "LANG" && langMoreSM === true)
