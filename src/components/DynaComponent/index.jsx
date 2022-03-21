@@ -33,7 +33,7 @@ export const HomeComponent = ({ handler }) => {
         <div className="grid w-[calc(100vw-24px)] xl:w-1/2 justify-items-center xl:justify-items-end gap-10 xl:gap-12">
           <p className="font-medium text-[36px] xl:text-4xl text-left xl:text-center leading-[46.88px] px-0 xl:px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className="grid xl:flex gap-3 w-4/5 justify-left xl:justify-center">
-            <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[20px] xl:text-[24px] leading-[28px] xl:leading-[26px] py-3 xl:py-4 min-w-[0] xl:min-w-[200px] w-[fit-content] xl:w-auto" />
+            <CommonButton title="Purchase Token" handler={() => handler('tokenSale')} className="text-[20px] xl:text-[24px] leading-[28px] xl:leading-[26px] py-3 xl:py-4 min-w-[0] xl:min-w-[200px] w-[fit-content] xl:w-auto" />
             <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[20px] xl:text-[24px] leading-[28px] xl:leading-[26px] py-3 xl:py-4 min-w-[0] xl:min-w-[200px] w-[fit-content] xl:w-auto" />
           </div>
         </div>
@@ -141,7 +141,7 @@ export const TokenSaleComponent = () => {
               <TokenSaleStepComponent name="Bonus" />
             </div>
             <div className="w-full bg-white rounded-full p-1 px-1.5 lg:p-1.5 lg:px-2"><div className="bg-gradient-to-r from-[#03185B] to-[#0040C1] rounded-[5px] lg:rounded-[8px] w-2/3 h-4 xl:h-6"></div></div>
-            <div className="grid justify-items-center mt-6 lg:mt-12 w-full" ><CommonButton title="Purchase Token" className="from-[#03185B] via-[#133295] to-[#03185B] text-white font-[500] rounded-[12px] lg:rounded-[16px] text-[19px] lg:text-[24px] leading-[22px] lg:leading-[28px] min-w-[220px] lg:min-w-[250px] py-4" /></div>
+            <div className="grid justify-items-center mt-6 lg:mt-12 w-full" ><a href='/tokenSale'><CommonButton title="Purchase Token" className="from-[#03185B] via-[#133295] to-[#03185B] text-white font-[500] rounded-[12px] lg:rounded-[16px] text-[19px] lg:text-[24px] leading-[22px] lg:leading-[28px] min-w-[220px] lg:min-w-[250px] py-4" /></a></div>
           </div>
         </div>
         <div className="flex-row w-full lg:w-1/2 space-y-6 xl:space-y-12">

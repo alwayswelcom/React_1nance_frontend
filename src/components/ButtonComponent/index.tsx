@@ -6,13 +6,13 @@ interface CommonButtonProps {
   title: string,
   isSmall?: boolean,
   icon?: any,
-  handler: any,
+  handler?: any,
   className?: string,
 }
 
 export const CommonButton: React.FC<CommonButtonProps> = ({ title, isSmall = false, icon = null, handler, className = "" }) => {
   return (
-    <div onClick={() => handler()} className={`flex justify-center gap-2 cursor-pointer items-center bg-gradient-to-r from-[#FFAF10] via-[#F97919] to-[#FFAF10] bg-[length:200%_100%] hover:bg-[center_right_1rem] hover:scale-[1.02] active:scale-[0.98] transition-all duration-700 ease-out rounded-[12px] px-8 py-3 text-[18px] text-[#03185B] text-center font-bold leading-[21px] drop-shadow-[0_5px_6px_rgba(0,0,0,0.5)] ${!isSmall ? "min-w-[200px] max-w-[240px]" : ""} ${className}`}>
+    <div onClick={handler} className={`flex justify-center gap-2 cursor-pointer items-center bg-gradient-to-r from-[#FFAF10] via-[#F97919] to-[#FFAF10] bg-[length:200%_100%] hover:bg-[center_right_1rem] hover:scale-[1.02] active:scale-[0.98] transition-all duration-700 ease-out rounded-[12px] px-8 py-3 text-[18px] text-[#03185B] text-center font-bold leading-[21px] drop-shadow-[0_5px_6px_rgba(0,0,0,0.5)] ${!isSmall ? "min-w-[200px] max-w-[240px]" : ""} ${className}`}>
       {title}{icon && <img src={icon} alt="buttonIcon" />}
     </div>
   )

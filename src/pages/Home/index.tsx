@@ -5,9 +5,14 @@ import { HomeComponent, IOCComponent, MobileAppComponent, OurCoinComponent, Road
 import Footer from '../../components/Footer'
 import { ScrollUpButton } from '../../components/ButtonComponent'
 
-const Home: React.FC = () => {
+interface HomeProps {
+  uri: string
+}
+
+const Home: React.FC<HomeProps> = ({ uri }) => {
 
   const [showButton, setShowButton] = useState(false);
+  const [innerUri, setInnerUri] = useState(uri)
   // const [offset, setOffset] = useState(0);
 
   const location = useLocation();
@@ -24,10 +29,25 @@ const Home: React.FC = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (innerUri === '') return
+    let element: any = document.getElementById(innerUri)
+    let topPos = element.offsetTop
+    let headerHeight: any = document.getElementById('header')?.offsetHeight
+    if (headerHeight === 0) headerHeight = 70
+    window.scrollTo({
+      top: topPos - headerHeight,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [innerUri])
+
   const handleGoSection = (index: string) => {
     if (location.pathname === '/' && index !== '/') {
-      const element: any = document.getElementById(index)
-      const topPos = element.offsetTop
+      setInnerUri(index)
+      if (index === '') return
+      let element: any = document.getElementById(index)
+      let topPos = element.offsetTop
       let headerHeight: any = document.getElementById('header')?.offsetHeight
       if (headerHeight === 0) headerHeight = 70
       window.scrollTo({
