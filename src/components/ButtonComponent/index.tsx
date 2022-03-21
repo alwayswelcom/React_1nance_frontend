@@ -79,7 +79,7 @@ export const PlayButton: React.FC<PlayButtonProps> = ({ handler, showVideo }) =>
             <div className="relative w-auto my-6 mx-auto max-w-3xl">             
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">               
                 <div className="relative flex-auto z-1000">
-                  <video src='1.mp4' muted={true} autoPlay loop />
+                  <video src='' muted={true} autoPlay loop />
                 </div>     
                 <div className="backdrop"/>                           
               </div>
