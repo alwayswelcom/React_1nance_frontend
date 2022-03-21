@@ -1,6 +1,6 @@
 import React from "react";
 import { DownloadIcon } from "@heroicons/react/solid"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CommonButtonProps {
   title: string,
@@ -34,6 +34,10 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ url = "", lang, 
   )
 }
 
+
+
+
+
 interface IconButtonProps {
   handler?: any,
   icon: any,
@@ -41,16 +45,19 @@ interface IconButtonProps {
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({ handler, icon, className = "" }) => {
+
   return (
     <div onClick={handler} className={`flex justify-center w-12 h-12 cursor-pointer transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] ${className}`}><img src={icon} alt="icon" /></div>
   )
 }
 
 interface PlayButtonProps {
-  handler: any
+  handler: any,
+  showVideo: boolean
 }
 
-export const PlayButton: React.FC<PlayButtonProps> = ({ handler }) => {
+export const PlayButton: React.FC<PlayButtonProps> = ({ handler, showVideo }) => {
+  console.log(handler, showVideo) ;
   return (
     <div className="grid justify-items-center mt-[-125px] md:mt-[-170px] lg:mt-[-140px] gap-1 lg:gap-0 text-[14px] md:text-[20px] lg:text-[16px] font-[700]">
       <div onClick={handler} className="cursor-pointer grid w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[72px] lg:h-[72px] hover:scale-[1.03] active:scale-100 pl-2 rounded-full bg-[#F97919] hover:bg-[#FFAF10] active:bg-[#F97919] transition-all duration-300 ease-out place-content-center">
@@ -60,8 +67,30 @@ export const PlayButton: React.FC<PlayButtonProps> = ({ handler }) => {
           </svg>
         </div>
       </div>
+      
+
       <div className="mt-[-30px] md:mt-[-40px] lg:mt-[-30px]">How it works</div>
-    </div>
+      {/* main modal */}
+      {showVideo ? (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 outline-none focus:outline-none "
+          >
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">             
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">               
+                <div className="relative flex-auto z-1000">
+                  <video src='1.mp4' muted={true} autoPlay loop />
+                </div>     
+                <div className="backdrop"/>                           
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"  onClick={handler} ></div>
+        </>
+      ) : null}
+      
+      {/* modal end */}
+    </div >
   )
 }
 

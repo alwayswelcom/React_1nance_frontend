@@ -25,6 +25,7 @@ import TitleComponent from './TitleComponent'
 import { TokenSaleStepComponent } from '../StepComponent'
 import ArrowComponent from './ArrowComponent'
 import MemberComponent from '../MemberComponent'
+import { useState } from 'react'
 
 export const HomeComponent = ({ handler }) => {
   return (
@@ -46,18 +47,27 @@ export const HomeComponent = ({ handler }) => {
 }
 
 export const IOCComponent = () => {
-  const handlePlay = () => { }
+  const [showVideo, setShowVideo] = useState(false);
+  const handlePlay = () => {
+    setShowVideo(!showVideo);
+  }
   return (
-    <div className="grid m-[12px] my-12 md:m-18 xl:m-24">
+    // <div className="grid m-[12px] my-12 md:m-18 xl:m-24 `${}`">
+    <div className={showVideo ? `open grid m-[12px] my-12 md:m-18 xl:m-24` : `grid m-[12px] my-12 md:m-18 xl:m-24`}>
       <TitleComponent anchor="ico" title="What is Crypto ICO" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center space-x-12">
         <div className="grid xl:flex gap-x-24 m-auto items-center">
-          <div className="xl:order-last min-w-[30%] justify-center grid"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
+          <div className="xl:order-last min-w-[30%] justify-center grid"><img src={ilustrWhatisICO1} alt="Illustrs" />
+            <PlayButton handler={handlePlay} showVideo={showVideo} />
+          </div>
+          
+          
           <div className="flex-row space-y-4 mt-16 xl:mt-0">
             <div className="font-light text-[18px] xl:text-[24px] leading-[24px] xl:leading-[28.13px] max-w-xl px-8 xl:px-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
           </div>
         </div >
       </div>
+      
     </div>
   )
 }
