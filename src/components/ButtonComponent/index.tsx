@@ -1,7 +1,8 @@
 import React from "react";
 import { DownloadIcon } from "@heroicons/react/solid"
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReactPlayer from 'react-player';
+import FadeLoader from 'react-spinners/FadeLoader';
 
 interface CommonButtonProps {
   title: string,
@@ -30,7 +31,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ url = "", lang, 
   return (
     <div className="grid justify-items-center gap-2 w-24 cursor-pointer" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onMouseUp={() => setHover(true)} onMouseDown={() => setHover(false)}>
       <div className="w-16 h-16"><img src={flag} className={`w-full transform-all duration-500 ${hover ? 'scale-105' : ''}`} alt="flag" /></div>
-      <div className="flex gap-2 text-[20px] leading-[23.44px] capitalize"><a href="http://africau.edu/images/default/sample.pdf" target="_blank"><DownloadIcon className={`fill-[#FB941A] w-6 h-6 ${hover ? 'animate-bounce' : ''}`} /></a><span>{lang}</span></div>
+      <div className="flex gap-2 text-[20px] leading-[23.44px] capitalize" ><a download='1nance White Paper.pdf' href="./1nance White Paper.pdf" target={"_blank"}><DownloadIcon className={`fill-[#FB941A] w-6 h-6 ${hover ? 'animate-bounce' : ''}`} /></a><span>{lang}</span></div>
     </div>
   )
 }
@@ -53,6 +54,10 @@ interface PlayButtonProps {
 }
 
 export const PlayButton: React.FC<PlayButtonProps> = ({ handler, showVideo }) => {
+  const [loadend, setLoadend] = useState(false)
+  const videoElementRef = useRef()
+  console.log(videoElementRef);
+
   return (
     <div className="grid justify-items-center mt-[-125px] md:mt-[-170px] lg:mt-[-140px] gap-1 lg:gap-0 text-[14px] md:text-[20px] lg:text-[16px] font-[700]">
       <div onClick={handler} className="cursor-pointer grid w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[72px] lg:h-[72px] hover:scale-[1.03] active:scale-100 pl-2 rounded-full bg-[#F97919] hover:bg-[#FFAF10] active:bg-[#F97919] transition-all duration-300 ease-out place-content-center">
@@ -66,8 +71,9 @@ export const PlayButton: React.FC<PlayButtonProps> = ({ handler, showVideo }) =>
       {showVideo ? (
         <>
           <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none z-1000">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl min-w-[50vw]">
+
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none z-1000 min-w-[50vw]">
                 <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
                   <h3 className="text-3xl font=semibold">How it works</h3>
                   <button
@@ -79,9 +85,13 @@ export const PlayButton: React.FC<PlayButtonProps> = ({ handler, showVideo }) =>
                     </span>
                   </button>
                 </div>
-                <div className="relative flex-auto">
-                <ReactPlayer url='https://www.twitch.tv/videos/106400740' loop={true} playing={true} />                  
-                </div>               
+
+                <div className="relative flex-auto w-fit flex justify-center items-center p-auto">
+                  {loadend ? (null) : (<div className="absolute flex justify-center items-center p-auto ">
+                    <FadeLoader /></div>)}
+                  <ReactPlayer url='https://www.twitch.tv/videos/106400740' loop={true} playing={true} onReady={() => setLoadend(true)} />
+                  {/* <ReactPlayer url='./1.mp4' loop={true} playing={true} onReady={() => setLoadend(true)} /> */}
+                </div>
 
               </div>
               <div className="backdrop"></div>
